@@ -1,6 +1,8 @@
-use std::fs::File;
-use std::io::{BufRead, BufReader};
-use std::iter::zip;
+use std::{
+    fs::File,
+    io::{BufRead, BufReader},
+    iter::zip,
+};
 
 fn main() {
     let file = File::open("input.txt").unwrap();
