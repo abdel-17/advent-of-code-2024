@@ -2,10 +2,10 @@ use std::fs::read_to_string;
 
 fn main() {
     let input = read_to_string("input.txt").unwrap();
-    println!("{}", solve_day_two(&input));
+    println!("{}", solve_part_two(&input));
 }
 
-fn solve_day_two(input: &str) -> usize {
+fn solve_part_two(input: &str) -> usize {
     let grid: Vec<Vec<char>> = input.lines().map(|line| line.chars().collect()).collect();
     let rows = grid.len();
     let columns = grid[0].len();
@@ -37,7 +37,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_solve_day_two() {
+    fn test_solve_part_two() {
         let input = [
             "MMMSXXMASM",
             "MSAMXMSMSA",
@@ -51,6 +51,6 @@ mod tests {
             "MXMXAXMASX",
         ]
         .join("\n");
-        assert_eq!(solve_day_two(&input), 9);
+        assert_eq!(solve_part_two(&input), 9);
     }
 }
